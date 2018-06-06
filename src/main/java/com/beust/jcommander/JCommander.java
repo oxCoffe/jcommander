@@ -216,6 +216,7 @@ public class JCommander {
 	}
 
 	private JCommander(Options options) {
+		this.setResourceBundle();
 		if (options == null) {
 			throw new NullPointerException("options");
 		}
@@ -960,7 +961,7 @@ public class JCommander {
 						this.messages.getString("expected") + arity + this.messages.getString("values.after") + arg);
 			}
 		} else {
-			throw new ParameterException(this.messages.getString("expected.value.after.paramter") + arg);
+			throw new ParameterException(this.messages.getString("expected.value.after.parameter") + arg);
 		}
 
 		return arity + 1;
@@ -1688,7 +1689,7 @@ public class JCommander {
 	}
 
 	void setResourceBundle() {
-		this.messages = ResourceBundle.getBundle("MessageBundle", this.currentLocale);
+		this.messages = ResourceBundle.getBundle("MessagesBundle", this.currentLocale);
 	}
 
 }
