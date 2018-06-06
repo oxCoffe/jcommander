@@ -1248,10 +1248,10 @@ public class JCommander {
 		}
 
 		public JCommander build() {
+			jCommander.setResourceBundle();
 			if (args != null) {
 				jCommander.parse(args);
 			}
-			jCommander.setResourceBundle();
 			return jCommander;
 		}
 	}
