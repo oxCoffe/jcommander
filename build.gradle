@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'org.testng:testng:6.9.13'
+    testCompile 'org.testng:testng:6.9.13.6'
 }
 
 jar {
